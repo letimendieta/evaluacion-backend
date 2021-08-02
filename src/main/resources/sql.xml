@@ -1,0 +1,50 @@
+<sql>
+        <query>
+            <nombre>select_preguntas</nombre>
+            <value >
+                select f.descripcion as factordescripcion , g1.descripcion as grupo, g2.descripcion as grupoevaluacion, p.pregunta,p.peso,p.idpregunta from
+                grupos g1
+                join gruposevaluacion g2 on g1.idgrupo=g2.idgrupo
+                join factores f on g2.idgrupoevaluacion=f.idgrupoevaluacion
+                join variables v on f.idfactor=v.idfactor
+                join preguntas p on v.idvariable=p.idvariable
+                where g1.idgrupo=? and f.idfactor=?
+                order by p.nroorden asc
+            </value>
+        </query>
+    <query >
+        <nombre>select_escalaevaluacion</nombre>
+        <value >
+            select valor, descripcion, observacion from escalaevaluacion
+        </value>
+    </query>
+    <query>
+        <nombre>select_grupo_id</nombre>
+        <value >
+            select idgrupo, descripcion from grupos where idgrupo=?;
+        </value>
+    </query>
+    <query>
+        <nombre>select_factores_por_grupo</nombre>
+        <value>select descripcion from factores where idgrupoevaluacion= ?</value>
+    </query>
+
+    <query>
+        <nombre>select_personal</nombre>
+        <value>
+            select p.nrodoc,p.apellidos,p.nombres,p.sexo,p.fecingreso,a.descripcion,
+            case
+            when rubro='P' then 'PER'
+            when rubro='C' then 'CON'
+            else
+            'COM'
+            end as vinculolaboral
+            from rh.personal p join rh.areatrab a
+            on p.codarea=a.codarea
+            where a.descripcion like '%VICE%';
+        </value>
+    </query>
+
+
+</sql>
+

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<appconfig>
+    <!-- <datasourcesconfig>
+               <datasourcesfilename>/etc/datasources/acad.xml</datasourcesfilename>
+                 <jerarquia>datasources.datasource</jerarquia>
+                 <connection>
+                     <min-pool-size>10</min-pool-size>
+                     <max-pool-size>20</max-pool-size>
+                     <idleTimeout>20</idleTimeout>
+                 </connection>
+             </datasourcesconfig>
+
+             <datasourcesconfig>
+                 <datasourcesfilename>/etc/datasources/gca.xml</datasourcesfilename>
+                 <jerarquia>datasources.datasource</jerarquia>
+                 <connection>
+                     <min-pool-size>10</min-pool-size>
+                     <max-pool-size>20</max-pool-size>
+                     <idleTimeout>20</idleTimeout>
+                 </connection>
+             </datasourcesconfig>
+             <datasourcesconfig>
+                 <datasourcesfilename>/etc/datasources/academico.xml</datasourcesfilename>
+                 <jerarquia>datasources.datasource</jerarquia>
+                 <connection>
+                     <min-pool-size>10</min-pool-size>
+                     <max-pool-size>20</max-pool-size>
+                     <idleTimeout>20</idleTimeout>
+                 </connection>
+             </datasourcesconfig>
+             <datasourcesconfig>
+                 <datasourcesfilename>/etc/datasources/revision.xml</datasourcesfilename>
+                 <jerarquia>datasources.datasource</jerarquia>
+                 <connection>
+                     <min-pool-size>10</min-pool-size>
+                     <max-pool-size>20</max-pool-size>
+                     <idleTimeout>20</idleTimeout>
+                 </connection>
+             </datasourcesconfig>-->
+
+         <datasourcesconfig>
+                <datasourcesfilename>/home/leticia/wildfly-10.1.0.Final/standalone2/configuration/standalone.xml</datasourcesfilename>
+                <jerarquia>profile.subsystem.datasources.datasource</jerarquia>
+                <connection>
+                    <min-pool-size>10</min-pool-size>
+                    <max-pool-size>20</max-pool-size>
+                    <idleTimeout>20</idleTimeout>
+                </connection>
+            </datasourcesconfig>
+
+</appconfig>
